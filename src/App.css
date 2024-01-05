@@ -1,38 +1,70 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #e74c3c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  padding: 8px;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
+  width: 200px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #c0392b;
+}
+
+.task {
+  list-style-type: none;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Adjusted for better responsiveness */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #ecf0f1;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.task:hover {
+  background-color: #d4e6f1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.task.completed {
+  text-decoration: line-through;
+  color: #da0066;
+}
+
+.task-buttons {
+  margin-top: 8px; /* Adjusted for better spacing on smaller screens */
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 600px) {
+  input {
+    width: 100%; /* Make the input field full width on smaller screens */
   }
 }
